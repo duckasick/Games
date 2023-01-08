@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://TehuisDragNDropV2.gd" type="Script" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 22.0
+
+[node name="TehuisDragNDropV2" type="KinematicBody2D"]
+position = Vector2( 100, 88 )
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="Button" type="Button" parent="."]
+margin_left = -15.0
+margin_top = -16.0
+margin_right = 16.0
+margin_bottom = 18.0
+
+[node name="Collisioncheck" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisioncheck"]
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 30.0
+autostart = true
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="area_entered" from="Collisioncheck" to="." method="_on_Collisioncheck_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Playah.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Mobba.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
+[ext_resource path="res://Hud.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -1, -1, 0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 719, -1, 0, 0, 0, 0, 720, 480, 0, 0, 0, 0, -1, 478, 0, 0, 0, 0, -1, -1 )
+}
+
+[node name="Main" type="Node"]
+script = ExtResource( 3 )
+mob_scene = ExtResource( 2 )
+
+[node name="Playah" parent="." instance=ExtResource( 1 )]
+position = Vector2( 617, 299 )
+
+[node name="Mobtimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="Scoretimer" type="Timer" parent="."]
+
+[node name="Starttimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Spawn" type="Position2D" parent="."]
+position = Vector2( 74, 268 )
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( -1, -1 )
+
+[node name="Hud" parent="." groups=["mobs"] instance=ExtResource( 4 )]
+
+[connection signal="hit" from="Playah" to="." method="_on_Playah_hit"]
+[connection signal="hit" from="Playah" to="." method="new_game"]
+[connection signal="timeout" from="Mobtimer" to="." method="_on_Mobtimer_timeout"]
+[connection signal="timeout" from="Scoretimer" to="." method="_on_Scoretimer_timeout"]
+[connection signal="timeout" from="Starttimer" to="." method="_on_Starttimer_timeout"]
+[connection signal="startgame" from="Hud" to="." method="_on_Hud_startgame"]
+
+[editable path="Hud"]

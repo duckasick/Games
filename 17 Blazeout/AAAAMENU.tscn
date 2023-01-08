@@ -1,0 +1,109 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://AAAAMENU.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 43.0
+margin_top = 299.0
+margin_right = 172.0
+margin_bottom = 332.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button"]
+margin_left = 81.0
+margin_top = 12.0
+margin_right = 129.0
+margin_bottom = 37.0
+mouse_filter = 2
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 453.0
+margin_top = 315.0
+margin_right = 575.0
+margin_bottom = 398.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button2"]
+margin_left = 81.0
+margin_top = 12.0
+margin_right = 129.0
+margin_bottom = 37.0
+rect_pivot_offset = Vector2( -381, -236 )
+mouse_filter = 2
+text = "Nah"
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 257.0
+margin_top = 340.0
+margin_right = 383.0
+margin_bottom = 388.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button3"]
+margin_left = 20.0
+margin_top = 12.0
+margin_right = 129.0
+margin_bottom = 37.0
+rect_pivot_offset = Vector2( -381, -236 )
+mouse_filter = 2
+text = "CONTROLS!"
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 172.0
+margin_top = 80.0
+margin_right = 467.0
+margin_bottom = 146.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+margin_left = 180.26
+margin_top = 39.5976
+margin_right = 362.26
+margin_bottom = 95.5976
+rect_rotation = -5.73193
+rect_pivot_offset = Vector2( 40.3535, 28 )
+text = "prototypje"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Panel"]
+margin_left = -556.0
+margin_top = -58.0
+margin_right = -374.0
+margin_bottom = -1.99997
+rect_scale = Vector2( 2.52, 1.32 )
+rect_pivot_offset = Vector2( -381, -236 )
+text = "Blazeout"
+
+[node name="BB" type="VideoPlayer" parent="."]
+visible = false
+margin_left = -146.0
+margin_top = 84.0
+margin_right = 537.0
+margin_bottom = 718.0
+rect_rotation = -29.2
+volume_db = -1.84
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+volume_db = -5.244
+pitch_scale = 1.31
+
+[node name="LineEdit" type="LineEdit" parent="."]
+margin_left = 51.0
+margin_top = 264.0
+margin_right = 137.0
+margin_bottom = 293.0
+text = "0.6"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 63.0
+margin_top = 246.0
+margin_right = 136.0
+margin_bottom = 263.0
+text = "Difficulty"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
+[connection signal="finished" from="BB" to="." method="_on_BB_finished"]

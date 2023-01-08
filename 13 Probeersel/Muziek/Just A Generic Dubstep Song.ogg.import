@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Just A Generic Dubstep Song.ogg-99b75a39314b4ad657216b06308c3fbd.oggstr"
+
+[deps]
+
+source_file="res://Muziek/Just A Generic Dubstep Song.ogg"
+dest_files=[ "res://.import/Just A Generic Dubstep Song.ogg-99b75a39314b4ad657216b06308c3fbd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

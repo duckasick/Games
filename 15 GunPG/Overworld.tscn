@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://World/Tree.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=3]
+[ext_resource path="res://Mint Breath - Kirby's Dream Land.wav" type="AudioStream" id=4]
+[ext_resource path="res://Enemies/Borb.tscn" type="PackedScene" id=5]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+
+[node name="Overworld" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 640.0
+margin_bottom = 361.0
+texture = ExtResource( 3 )
+stretch_mode = 2
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Node2D" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 131, 114 )
+
+[node name="AnimationTree" parent="YSort/Node2D" index="4"]
+parameters/playback = SubResource( 1 )
+
+[node name="Borb" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 198, 191 )
+
+[node name="Tree" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 172, 114 )
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[editable path="YSort/Node2D"]

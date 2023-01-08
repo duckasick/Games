@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Arcane referentie/Ohthemisery.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 15.0
+
+[node name="Enemy" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2( 0, -6 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, -6 )
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -21.0
+margin_top = -25.0
+margin_right = 19.0
+margin_bottom = 15.0
+color = Color( 0.541176, 0.184314, 0.184314, 1 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

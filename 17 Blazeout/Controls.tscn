@@ -1,0 +1,258 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Controls/2022-12-29 01_05_34-IMG_1814.jpg ‎- Foto's.png" type="Texture" id=1]
+[ext_resource path="res://2022-12-29 00_57_42-Instellingen.png" type="Texture" id=2]
+[ext_resource path="res://Controls/2022-12-29 01_05_37-IMG_1814.jpg ‎- Foto's.png" type="Texture" id=3]
+[ext_resource path="res://Controls/2022-12-29 01_05_40-IMG_1814.jpg ‎- Foto's.png" type="Texture" id=4]
+[ext_resource path="res://Controls/2022-12-29 01_05_44-Downloads.png" type="Texture" id=5]
+[ext_resource path="res://Controls.gd" type="Script" id=6]
+
+[node name="Controls" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="2022-12-29005742-Instellingen" type="Sprite" parent="."]
+position = Vector2( 441, 256 )
+scale = Vector2( 0.344922, 0.368601 )
+texture = ExtResource( 2 )
+
+[node name="2022-12-29010540-Img1814jpg‎-Foto\'s" type="Sprite" parent="2022-12-29005742-Instellingen"]
+position = Vector2( 713.205, -398.805 )
+texture = ExtResource( 4 )
+
+[node name="2022-12-29010544-Downloads" type="Sprite" parent="."]
+position = Vector2( 596, 361 )
+scale = Vector2( 0.260819, 0.444521 )
+texture = ExtResource( 5 )
+
+[node name="2022-12-29010537-Img1814jpg‎-Foto\'s" type="Sprite" parent="."]
+position = Vector2( 565.614, 275.451 )
+scale = Vector2( 0.303142, 0.281436 )
+texture = ExtResource( 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 56.0
+margin_top = 166.0
+margin_right = 155.0
+margin_bottom = 233.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Typ hier als het moet"
+
+[node name="RichTextLabel18" type="RichTextLabel" parent="."]
+margin_left = 56.0
+margin_top = 166.0
+margin_right = 155.0
+margin_bottom = 233.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Typ hier als het moet"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = 476.0
+margin_top = 317.0
+margin_right = 663.0
+margin_bottom = 394.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Zet genoeg stappen per dag met"
+
+[node name="RichTextLabel17" type="RichTextLabel" parent="."]
+margin_left = 476.0
+margin_top = 317.0
+margin_right = 663.0
+margin_bottom = 394.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Zet genoeg stappen per dag met"
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="."]
+margin_left = 514.0
+margin_top = 188.0
+margin_right = 643.0
+margin_bottom = 255.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Hou deze van de randen weg met"
+
+[node name="RichTextLabel16" type="RichTextLabel" parent="."]
+margin_left = 514.0
+margin_top = 188.0
+margin_right = 643.0
+margin_bottom = 255.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Hou deze van de randen weg met"
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="."]
+margin_left = 521.0
+margin_top = 84.0
+margin_right = 668.0
+margin_bottom = 151.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Hou ^deze van telefoon weg met 
+
+
+
+
+
+
+
+
+
+
+"
+scroll_active = false
+
+[node name="RichTextLabel15" type="RichTextLabel" parent="."]
+margin_left = 521.0
+margin_top = 84.0
+margin_right = 668.0
+margin_bottom = 151.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Hou ^deze van telefoon weg met 
+
+
+
+
+
+
+
+
+
+
+"
+scroll_active = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+margin_left = 322.0
+margin_top = 433.0
+margin_right = 421.0
+margin_bottom = 500.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Klik op de groene hokjes"
+
+[node name="RichTextLabel14" type="RichTextLabel" parent="."]
+margin_left = 322.0
+margin_top = 433.0
+margin_right = 421.0
+margin_bottom = 500.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Klik op de groene hokjes"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+margin_left = 331.0
+margin_top = 6.0
+margin_right = 448.0
+margin_bottom = 85.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Hou boven 0"
+
+[node name="RichTextLabel13" type="RichTextLabel" parent="."]
+margin_left = 331.0
+margin_top = 6.0
+margin_right = 448.0
+margin_bottom = 85.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Hou boven 0"
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+margin_left = 105.0
+margin_top = 382.0
+margin_right = 204.0
+margin_bottom = 449.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Sleep naar het juiste vak"
+
+[node name="RichTextLabel12" type="RichTextLabel" parent="."]
+margin_left = 105.0
+margin_top = 382.0
+margin_right = 204.0
+margin_bottom = 449.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Sleep naar het juiste vak"
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="."]
+margin_left = 133.0
+margin_top = 48.0
+margin_right = 268.0
+margin_bottom = 115.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Lig met de knop op de juiste tijd in bed"
+
+[node name="RichTextLabel11" type="RichTextLabel" parent="."]
+margin_left = 133.0
+margin_top = 48.0
+margin_right = 268.0
+margin_bottom = 115.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Lig met de knop op de juiste tijd in bed"
+
+[node name="RichTextLabel9" type="RichTextLabel" parent="."]
+margin_left = 133.0
+margin_top = 48.0
+margin_right = 268.0
+margin_bottom = 115.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Lig met de knop op de juiste tijd in bed"
+
+[node name="RichTextLabel10" type="RichTextLabel" parent="."]
+margin_left = 133.0
+margin_top = 48.0
+margin_right = 268.0
+margin_bottom = 115.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Lig met de knop op de juiste tijd in bed"
+
+[node name="Line2D2" type="Line2D" parent="."]
+points = PoolVector2Array( 291, -18, 305, 101, 267, 157, 245, 256, 282, 335, 292, 400, 293, 471, 292, 509, 474, 530, 461, 407, 453, 304, 440, 277, 448, 178, 486, 133, 487, 32, 491, -3, 491, -12, 651, -34, 758, 0, 796, 108, 788, 169, 668, 170, 467, 156, 364, 150, 228, 133, 139, 128, 49, 127, -27, 133, -67, 183, -45, 265, 67, 276, 197, 275, 285, 290, 366, 306, 412, 303, 447, 302, 702, 311, 776, 309 )
+
+[node name="RichTextLabel20" type="RichTextLabel" parent="."]
+margin_left = 297.0
+margin_top = 159.0
+margin_right = 432.0
+margin_bottom = 226.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Tijd tot nieuwe game
+vvv"
+
+[node name="RichTextLabel21" type="RichTextLabel" parent="."]
+margin_left = 297.0
+margin_top = 159.0
+margin_right = 432.0
+margin_bottom = 226.0
+rect_scale = Vector2( 1.2, 1.3 )
+custom_colors/default_color = Color( 1, 0.937255, 0, 1 )
+text = "Tijd tot nieuwe game
+vvv"
+
+[node name="2022-12-29010534-Img1814jpg‎-Foto\'s" type="Sprite" parent="."]
+position = Vector2( 612, 275.75 )
+scale = Vector2( 0.273723, 0.271242 )
+texture = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1.0
+margin_top = 458.0
+margin_right = 164.0
+margin_bottom = 480.0
+text = ">>VOLGENDE<<"
+
+[node name="Animatie" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="timeout" from="Animatie" to="." method="_on_Animatie_timeout"]
