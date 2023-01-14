@@ -39,7 +39,7 @@ func _process(delta):
 		VeloV = 0
 		if Input.is_action_just_pressed("ui_select"):
 			VeloV += impulse
-			$timers/jump.start()
+#			$timers/jump.start()
 			gravity = GravityJ
 	if Input.is_action_just_released("ui_select") or GravityTrigger:
 #		GravityTrigger = true
