@@ -29,8 +29,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.86221, 0 )
 
 [node name="ClippedCamera" type="ClippedCamera" parent="Camroot/h/v"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.2244 )
-fov = 90.0
+fov = 80.0
 
 [node name="timers" type="Node" parent="."]
 
 [node name="roll" type="Timer" parent="timers"]
+
+[node name="jump" type="Timer" parent="timers"]
+one_shot = true
+
+[connection signal="timeout" from="timers/jump" to="." method="_on_jump_timeout"]
