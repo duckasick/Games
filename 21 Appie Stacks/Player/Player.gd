@@ -1,6 +1,6 @@
 extends KinematicBody
 
-#Te doen: Accel ipv gelijkt topV, snelheid uncappen als je in de lucht bent
+#Te doen: Accel ipv gelijkt topV, snelheid uncappen als je in de lucht bent, drift-modus, CSGO strafe
 
 var Velocity = Vector3.FORWARD
 var VeloV = 0
