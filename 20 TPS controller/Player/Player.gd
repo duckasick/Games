@@ -8,7 +8,11 @@ var VeloV = 0
 export var V = 20
 export var sprint = 35
 export var normaal = 20
+<<<<<<< HEAD
 export var impulse = 30	#jump
+=======
+export var impulse = 40
+>>>>>>> 361e89eda0d84d76d0515bbb4efeda39f2783c0c
 
 export var weight = 4 #Bepaald hoe makkelijk je van schuin slide.
 
@@ -24,6 +28,7 @@ func _ready():
 
 
 #OPTIES VOOR ACCEL TOEVOEGEN
+<<<<<<< HEAD
 func _physics_process(delta):
 	var rot = $Camroot/h.global_transform.basis.get_euler().y
 #	Roteert roteert input gebasseerd op camera_h
@@ -31,10 +36,19 @@ func _physics_process(delta):
 	$CollisionShape.rotation.y = rot
 #	Roteert hitbox en cylinder naar camera
 
+=======
+func _process(delta):
+	var rot = $Camroot/h.global_transform.basis.get_euler().y
+#	Roteert roteert input gebasseerd op camera_h
+>>>>>>> 361e89eda0d84d76d0515bbb4efeda39f2783c0c
 #	if not GlobalAccel:
 	Velocity = Vector3(Input.get_action_strength("d") - Input.get_action_strength("a"),0,Input.get_action_strength("s") - Input.get_action_strength("w")).rotated(Vector3.UP, rot).normalized()
 #	if GlobalAccel:
 #		Accel optie hier
+<<<<<<< HEAD
+=======
+
+>>>>>>> 361e89eda0d84d76d0515bbb4efeda39f2783c0c
 
 #	Zwaartekracht 
 	if !is_on_floor():
