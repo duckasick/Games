@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Level resources/Boostpad.gd" type="Script" id=1]
+
+[sub_resource type="Shader" id=1]
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.194368, 1, 0.155314 )
+
+[node name="Boostpad" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="CSGBox" type="CSGBox" parent="."]
+calculate_tangents = false
+width = 3.00353
+height = 0.0614093
+depth = 1.61982
+material = SubResource( 2 )
+
+[node name="Area" type="Area" parent="CSGBox"]
+transform = Transform( 7.5, 0, 0, 0, 0.1, 0, 0, 0, 4, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CSGBox/Area"]
+shape = SubResource( 3 )
+
+[connection signal="area_entered" from="CSGBox/Area" to="." method="_on_Area_area_entered"]

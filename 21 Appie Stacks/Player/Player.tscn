@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Camroot.gd" type="Script" id=2]
@@ -6,6 +6,10 @@
 [sub_resource type="CapsuleShape" id=1]
 radius = 1.14057
 height = 1.35843
+
+[sub_resource type="CapsuleShape" id=2]
+radius = 1.36501
+height = 0.7766
 
 [node name="Player" type="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14485, 0 )
@@ -34,8 +38,52 @@ fov = 80.0
 [node name="jump" type="Timer" parent="timers"]
 one_shot = true
 
+[node name="drift" type="Timer" parent="timers"]
+wait_time = 0.5
+
+[node name="driftboost" type="Timer" parent="timers"]
+wait_time = 0.666
+one_shot = true
+
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.117283, 0 )
 shape = SubResource( 1 )
 
-[connection signal="timeout" from="timers/jump" to="." method="_on_jump_timeout"]
+[node name="HUD" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="HUD"]
+margin_left = 86.0
+margin_top = 23.0
+margin_right = 126.0
+margin_bottom = 63.0
+color = Color( 1, 0, 0, 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HUD/ColorRect"]
+modulate = Color( 0, 0, 0, 1 )
+margin_right = 40.0
+margin_bottom = 40.0
+text = "Boosting"
+
+[node name="ColorRect2" type="ColorRect" parent="HUD"]
+margin_left = 34.0
+margin_top = 23.0
+margin_right = 74.0
+margin_bottom = 63.0
+color = Color( 1, 0, 0, 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HUD/ColorRect2"]
+modulate = Color( 0, 0, 0, 1 )
+margin_right = 40.0
+margin_bottom = 40.0
+text = "Ready"
+
+[node name="Area" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+shape = SubResource( 2 )
+
+[connection signal="timeout" from="timers/drift" to="." method="_on_drift_timeout"]
+[connection signal="timeout" from="timers/driftboost" to="." method="_on_driftboost_timeout"]
