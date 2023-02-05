@@ -13,7 +13,6 @@ func _ready():
 #	pass
 
 
-
 func _on_Area_area_entered(area):
-	emit_signal("boost")
-	print("asdf")
+	GV.BoostPad = true
+	print("kak")

@@ -45,6 +45,9 @@ wait_time = 0.5
 wait_time = 0.666
 one_shot = true
 
+[node name="boostpad" type="Timer" parent="timers"]
+one_shot = true
+
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.117283, 0 )
 shape = SubResource( 1 )
@@ -87,3 +90,4 @@ shape = SubResource( 2 )
 
 [connection signal="timeout" from="timers/drift" to="." method="_on_drift_timeout"]
 [connection signal="timeout" from="timers/driftboost" to="." method="_on_driftboost_timeout"]
+[connection signal="timeout" from="timers/boostpad" to="." method="_on_boostpad_timeout"]

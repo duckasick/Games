@@ -14,5 +14,3 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.11865, 0 )
 
 [node name="Boostpad" parent="." instance=ExtResource( 3 )]
 transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 3, 6.00381, 2.86295, 25.0219 )
-
-[connection signal="boost" from="Boostpad" to="Player" method="_on_Boostpad_boost"]

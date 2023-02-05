@@ -1,3 +1,3 @@
 extends Node
 
-var BoostPadV = 30
+var BoostPad = false

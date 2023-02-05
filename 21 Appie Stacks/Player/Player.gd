@@ -29,6 +29,8 @@ var Tstart = false		#Fixt probleem met _pressed en timer starten
 var boostready = false
 var sprinting = false
 
+var BoostDubbel = false	#Voorkomt dubbele trigger
+
 
 func _ready():
 	pass # Replace with function body.
@@ -108,10 +110,18 @@ func _physics_process(delta):
 				$timers/driftboost.start()
 				$HUD/ColorRect.color = Color(0,1,0,1)
 			$HUD/ColorRect2.color = Color(1,0,0,1)
+			
+	#	Boostpad interactie
+	if GV.BoostPad and BoostDubbel == false:
+		V += 20
+		LV += 20
+		$timers/boostpad.start()
+		GV.BoostPad = false
+		BoostDubbel = true
 		
 	move_and_slide(Velocity + Vector3.UP * VeloV - get_floor_normal() * weight, Vector3.UP)
 	print (V)
-
+	
 #	Ready boost
 func _on_drift_timeout():
 	boostready = true
@@ -122,9 +132,7 @@ func _on_driftboost_timeout():
 	else: V = normaal
 	$HUD/ColorRect.color = Color(1,0,0,1 )
 
-
-
-func _on_Boostpad_boost(value):
-	V += 20
-	print(V)
-	get_tree().quit()
+func _on_boostpad_timeout():
+	V -= 20
+	LV -= 20
+	BoostDubbel = false
